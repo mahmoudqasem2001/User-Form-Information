@@ -1,0 +1,26 @@
+<div class="py-8 md:px-36 px-16 sm:px-24">
+  <h2 class="text-2xl font-semibold mb-4">User List</h2>
+  <div class="overflow-x-auto">
+    <table class="min-w-full bg-white border border-gray-300 rounded-md">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 bg-gray-200 border-b">First Name</th>
+          <th class="py-2 px-4 bg-gray-200 border-b">Last Name</th>
+          <th class="py-2 px-4 bg-gray-200 border-b">Phone Number</th>
+          <th class="py-2 px-4 bg-gray-200 border-b"></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users" class="hover:bg-gray-100 text-center">
+          <td class="py-2 px-4 border-b">{{ user.firstName }}</td>
+          <td class="py-2 px-4 border-b">{{ user.lastName }}</td>
+          <td class="py-2 px-4 border-b">{{ user.phoneNumber }}</td>
+          <button (click)="deleteUser(user)" class="bg-red-500 text-white my-2 px-2 py-1 rounded-md hover:bg-red-600 focus:outline-none focus:shadow-outline-blue">
+            X
+          </button>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
